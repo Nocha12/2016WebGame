@@ -1,5 +1,5 @@
-const net = require('net');
+const socket = io.connect('http//localhost:4361');
 
-let client = net.connect({port:9899, host:'localhost'}, () => {
-    console.log('서버와 연결되었습니다.');
+socket.on('connection', (data) => {
+    alert(data);
 });

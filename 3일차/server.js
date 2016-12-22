@@ -1,9 +1,7 @@
-const net = require('net');
+const socket = require('socket.io');
 
-let server = net.createServer((client) => {
-    console.log('클라이언트가 연결되었습니다.');
-});
+let io = socket.listen(4361);
 
-server.listen(9899, 'localhost', () => {
-    console.log('서버가 실행되었습니다.');
+io.sockets.on('connection', (socket) => {
+    io.socket.emit('connection', '커넥트');
 });

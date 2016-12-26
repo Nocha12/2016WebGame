@@ -1,0 +1,9 @@
+{
+    "browser":true,
+    "camelcase":true,
+    "nonew":true,
+    "trailing":true,
+    "devel":true,
+    "white":true,
+    "exported":["Light"]
+}
